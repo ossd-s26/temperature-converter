@@ -4,7 +4,7 @@
     "manifest_version": 3,
     "description": "Convert temperatures on any page",
     "action": {
-        "default_icon": "media/icon.png",
-        "default_popup": "popup/popup.html"
+        "default_icon": "public/media/icon.png",
+        "default_popup": "public/popup.html"
     }
 }

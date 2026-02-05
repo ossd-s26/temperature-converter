@@ -1,0 +1,24 @@
+{
+    "name": "temperature-converter",
+    "version": "0.1.0",
+    "description": "Convert temperatures on any page",
+    "homepage": "https://github.com/ossd-s26/temperature-converter#readme",
+    "bugs": {
+        "url": "https://github.com/ossd-s26/temperature-converter/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ossd-s26/temperature-converter.git"
+    },
+    "author": "Alexey Ayzin, Aleks Nuzhnyi, Grace Smith, Susan Thao",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "fmt": "prettier -w .",
+        "lint": "eslint ."
+    },
+    "devDependencies": {
+        "eslint": "^9.39.2",
+        "prettier": "^3.8.1"
+    }
+}
