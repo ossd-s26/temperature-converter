@@ -7,7 +7,7 @@ body {
     padding: 12px;
     min-width: 240px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f5f7;
+    background: rgb(156,167,215, .5);
     color: #1d1d1f;
 }
 
@@ -17,10 +17,9 @@ body {
     gap: 10px;
 }
 
-h1 {
+p {
     margin: 0;
-    font-size: 14px;
-    font-weight: 600;
+    text-align: center;
 }
 
 .status {
@@ -30,24 +29,65 @@ h1 {
 }
 
 .options {
-    display: grid;
-    gap: 6px;
+    position: relative;
+    display: flex;
+    background-color: #f5f7ff;
+    padding: 4px;
+    border-radius: 999px;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.options::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc((100% - 8px) / 3);
+    height: calc(100% - 8px);
+    background-color: #b8cef945;
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease;
+    z-index: 1;
 }
 
 .option {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 8px;
-    border: 1px solid #d8d8d8;
-    border-radius: 6px;
-    background: #fff;
-    font-size: 12px;
-    line-height: 1.2;
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 6px 4px;
+    border-radius: 999px;
+    transition: color 0.2s ease;
 }
 
-.option input {
-    margin: 0;
+.option span {
+    pointer-events: none;
+}
+
+.option input[type="radio"] {
+    display: none;
+}
+
+.option input[type="radio"]:checked + span {
+    color: #185ee0;
+}
+
+.options:has(input[value="c_to_f"]:checked)::before {
+    transform: translateX(0%);
+}
+
+.options:has(input[value="f_to_c"]:checked)::before {
+    transform: translateX(100%);
+}
+
+.options:has(input[value="off"]:checked)::before {
+    transform: translateX(200%);
 }
 
 .actions {
@@ -63,6 +103,12 @@ h1 {
     border: 1px solid #c8c8c8;
     background: #fff;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.actions button:hover {
+    background: #f3f6ff;
+    border-color: #185ee0;
 }
 
 .actions button:disabled {
@@ -83,4 +129,9 @@ h1 {
 
 .message[data-tone='success'] {
     color: #0b6d2f;
+}
+
+#refresh-icon{
+    height: 10px;
+    width: 10px;
 }

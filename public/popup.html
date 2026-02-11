@@ -8,28 +8,31 @@
     </head>
     <body>
         <main class="popup">
-            <header>
+            <!-- <header>
                 <h1>Temperature Converter</h1>
                 <p id="status" class="status">Checking current mode...</p>
-            </header>
+            </header> -->
+            <!-- <div class="actions">
+                <button id="toggle" type="button">Toggle</button>
+                <button id="refresh" type="button">
+                    <img id="refresh-icon"src="media/refresh.png"/>
+                </button>
+            </div> -->
+            <p>Show</p>
             <section class="options" aria-label="Conversion mode">
                 <label class="option">
                     <input type="radio" name="mode" value="c_to_f" />
-                    Celsius to Fahrenheit
+                    <span>°F</span>
                 </label>
                 <label class="option">
                     <input type="radio" name="mode" value="f_to_c" />
-                    Fahrenheit to Celsius
+                    <span>°C</span>
                 </label>
                 <label class="option">
                     <input type="radio" name="mode" value="off" />
-                    Off
+                    <span>Off</span>
                 </label>
             </section>
-            <div class="actions">
-                <button id="toggle" type="button">Toggle</button>
-                <button id="refresh" type="button">Refresh</button>
-            </div>
             <p id="message" class="message" aria-live="polite"></p>
         </main>
         <script src="popup.js"></script>
