@@ -17,6 +17,10 @@ setting up your development environment, versioning, and code review.
 
 TODO
 
+## Code of Conduct
+
+TODO
+
 ## Roadmap
 
 TODO
