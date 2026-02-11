@@ -10,8 +10,8 @@ TODO
 
 ## Contributing
 
-Refer to the [CONTRIBUTING.md](./CONTRIBUTING.md) document for information
-on setting up your development environment, versioning, and code review.
+Refer to the [CONTRIBUTING.md](./CONTRIBUTING.md) document for information on
+setting up your development environment, versioning, and code review.
 
 ## License
 
