@@ -1,8 +1,16 @@
 {
     "name": "Temperature Converter",
-    "version": "0.1",
+    "version": "0.1.1",
     "manifest_version": 3,
     "description": "Convert temperatures on any page",
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["src/content_script.js"],
+            "run_at": "document_start",
+            "css": ["public/temperature_converter.css"]
+        }
+    ],
     "action": {
         "default_icon": "public/media/icon.png",
         "default_popup": "public/popup.html"

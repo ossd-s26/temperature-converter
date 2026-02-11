@@ -6,16 +6,15 @@
 
 No submissions require code review. Our mechanism to prevent bad code from
 breaking the `main` branch is the `staging` branch. This branch is designed to
-allow the project contributors to test updates before releasing them to
-`main`.
+allow the project contributors to test updates before releasing them to `main`.
 
 ### Versioning
 
 Merging a pull request from a feature/fix branch into `staging` should be
 considered a sub-minor version iteration (0.0.12 --> 0.0.13). Merging a change
-from staging to main should be considered a minor version iteration
-(0.12.0 --> 0.13.0). Major version changes should only occur when core
-maintainers agree that the functionality has changed enough to warrant it.
+from staging to main should be considered a minor version iteration (0.12.0 -->
+0.13.0). Major version changes should only occur when core maintainers agree
+that the functionality has changed enough to warrant it.
 
 All version changes require documentation updates and internal versioning
 updates.

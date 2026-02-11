@@ -1,5 +1,37 @@
+<!doctype html>
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="popup.css" />
+        <title>Temperature Converter</title>
+    </head>
     <body>
-        <h1>Hello, World!</h1>
+        <main class="popup">
+            <header>
+                <h1>Temperature Converter</h1>
+                <p id="status" class="status">Checking current mode...</p>
+            </header>
+            <section class="options" aria-label="Conversion mode">
+                <label class="option">
+                    <input type="radio" name="mode" value="c_to_f" />
+                    Celsius to Fahrenheit
+                </label>
+                <label class="option">
+                    <input type="radio" name="mode" value="f_to_c" />
+                    Fahrenheit to Celsius
+                </label>
+                <label class="option">
+                    <input type="radio" name="mode" value="off" />
+                    Off
+                </label>
+            </section>
+            <div class="actions">
+                <button id="toggle" type="button">Toggle</button>
+                <button id="refresh" type="button">Refresh</button>
+            </div>
+            <p id="message" class="message" aria-live="polite"></p>
+        </main>
+        <script src="popup.js"></script>
     </body>
 </html>
