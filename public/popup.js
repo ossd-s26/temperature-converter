@@ -130,7 +130,7 @@
             }
             setMessage('No response from page.', 'error');
         } catch (error) {
-            setMessage('Unable to reach the page.', 'error');
+            setMessage('Refresh page to enable converter.', 'error');
             setEnabled(false);
         }
     }
