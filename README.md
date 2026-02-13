@@ -29,10 +29,6 @@ Licensed under the GNU GPL v3.0. See [LICENSE](./LICENSE).
 Please read [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) before contributing. By
 participating, you agree to follow the standards outlined there.
 
-## Code of Conduct
-
-TODO
-
 ## Roadmap
 
 TODO
