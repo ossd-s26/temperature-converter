@@ -87,3 +87,12 @@
         opacity: 0;
     }
 }
+
+/* highlight converted temperatures on the webpage */
+.temp-highlight {
+    background-color: yellow;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+}
