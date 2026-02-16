@@ -232,10 +232,13 @@
 
         if (currentMode === MODE_OFF) {
             const original = originalTextByNode.get(textNode);
-            if (original !== undefined && textNode.nodeValue !== original) {
-                textNode.nodeValue = original;
-            }
             if (original !== undefined) {
+                // If the text node is wrapped in a highlighted span, unwrap it
+                if (textNode.parentNode && textNode.parentNode.classList?.contains('temp-highlight')) {
+                    textNode.parentNode.replaceWith(document.createTextNode(original));
+                } else {
+                    textNode.nodeValue = original;
+                }
                 originalTextByNode.delete(textNode);
             }
             return;
@@ -253,7 +256,19 @@
             pageUnit,
         );
         if (converted !== textNode.nodeValue) {
-            textNode.nodeValue = converted;
+            // Create a wrapper span for highlighting converted temperatures
+            const wrapper = document.createElement('span');
+
+            // Wrap each converted temperature in a span with highlight class
+            wrapper.innerHTML = converted.replace(
+                /([+-]?\d+(?:,\d{3})*(?:\.\d+)?\s*°[CF])/gi,
+                '<span class="temp-highlight">$1</span>'
+            );
+
+            // Replace the original text node with the new wrapper
+            if (textNode.parentNode) {
+                textNode.parentNode.replaceChild(wrapper, textNode);
+            }
         }
     }
 
