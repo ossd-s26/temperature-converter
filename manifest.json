@@ -1,6 +1,6 @@
 {
     "name": "Temperature Converter",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "manifest_version": 3,
     "description": "Convert temperatures on any page",
     "content_scripts": [
