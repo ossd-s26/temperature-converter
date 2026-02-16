@@ -192,7 +192,7 @@
                 const converted = formatTemp(fToC(parsed));
                 return `${converted}°C`;
             });
-            updated = updated.replace(fahrenheitRegex, "Celcius")
+            updated = updated.replace(fahrenheitRegex, "Celsius")
             return updated;
         }
         return text;
