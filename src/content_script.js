@@ -43,7 +43,6 @@
 
     const numberPattern = '([+-]?\\d+(?:,\\d{3})*(?:\\.\\d+)?)';
     const degreePattern = '(?:°|º|deg(?:rees?)?)';
-    const unitPattern = '([FfCc](ahrenheit)?(elsius)?)';
     const cRegex = new RegExp(
         `${numberPattern}\\s*${degreePattern}?\\s*C\\b`,
         'gi',
