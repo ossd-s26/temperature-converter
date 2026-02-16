@@ -43,12 +43,21 @@
 
     const numberPattern = '([+-]?\\d+(?:,\\d{3})*(?:\\.\\d+)?)';
     const degreePattern = '(?:°|º|deg(?:rees?)?)';
+    const unitPattern = '([FfCc](ahrenheit)?(elsius)?)';
     const cRegex = new RegExp(
         `${numberPattern}\\s*${degreePattern}?\\s*C\\b`,
         'gi',
     );
+    const celsiusRegex = new RegExp(
+        '(celsius\\b)', 
+        'gi',
+    );
     const fRegex = new RegExp(
         `${numberPattern}\\s*${degreePattern}?\\s*F\\b`,
+        'gi',
+    );
+    const fahrenheitRegex = new RegExp(
+        '(fahrenheit\\b)', 
         'gi',
     );
     const unitlessRegex = new RegExp(
@@ -165,6 +174,7 @@
                 const converted = formatTemp(cToF(parsed));
                 return `${converted}°F`;
             });
+            updated = updated.replace(celsiusRegex, "Fahrenheit")
             return updated;
         }
         if (mode === MODE_F_TO_C) {
@@ -182,6 +192,7 @@
                 const converted = formatTemp(fToC(parsed));
                 return `${converted}°C`;
             });
+            updated = updated.replace(fahrenheitRegex, "Celcius")
             return updated;
         }
         return text;
