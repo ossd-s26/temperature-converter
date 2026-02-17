@@ -39,3 +39,4 @@ It mostly works if the temperature is listed as text in HTML, but there may be s
 I (Grace) would add feature that allows users to select a specific temperature displayed on a webpage to highlight and convert instead of automatically converting every single temperature that is displayed on the webpage.
 
 ## Should this project keep going?
+If this project were to keep going, we would add the previous components as stated, however, we would also look into making this a more multi-use extension. For example being able to convert more than temperature, such as live currency converters, length, timezones, etc. There's so much more we could add that would be helpful and actually useful.  
