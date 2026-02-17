@@ -20,13 +20,18 @@
 # Presenting temperature-converter
 
 ## What does our extension do?
+Our extension detects temperatures displayed in text on a webpage and converts from Fahrenheit to Celsius and from Celsius to Fahrenheit.
 
 ## How did we program it?
+I (Grace) added text highlighting to make it easier to spot the temperature conversion changing on the page. In the beginning, there was a small issue where the highlighting remained on the page even after toggling off the extension, but after editing the JavaScript file that managed the toggling, I was able to make sure that there was only text highlighting when the extension was toggled on.
 
 ## How did we communicate?
+We mainly communicated through email and Zoom meetings.
 
 ## Does it work?
+It mostly works if the temperature is listed as text in HTML, but there may be some issues if the temperature text cannot be identified in the DOM or the temperature is part of an image, etc.
 
 ## What would we do differently?
+I (Grace) would add feature that allows users to select a specific temperature displayed on a webpage to highlight and convert instead of automatically converting every single temperature that is displayed on the webpage.
 
 ## Should this project keep going?
