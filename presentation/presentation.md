@@ -29,7 +29,11 @@ I (Grace) added text highlighting to make it easier to spot the temperature conv
 We mainly communicated through email and Zoom meetings.
 
 ## Does it work?
-It mostly works if the temperature is listed as text in HTML, but there may be some issues if the temperature text cannot be identified in the DOM or the temperature is part of an image, etc.
+It mostly works if the temperature is listed as text in HTML, but there may be some issues if the temperature text cannot be identified through our scripts in the DOM or the temperature is part of an image, etc.
+
+[Working Example 1](https://en.wikipedia.org/wiki/Temperature)
+[Working Example 2](https://www.weather.gov/okx/)
+[Broken Example](https://weather.com/)
 
 ## What would we do differently?
 I (Grace) would add feature that allows users to select a specific temperature displayed on a webpage to highlight and convert instead of automatically converting every single temperature that is displayed on the webpage.
