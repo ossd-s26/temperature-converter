@@ -29,7 +29,7 @@ I (Grace) added text highlighting to make it easier to spot the temperature conv
 We mainly communicated through email and Zoom meetings.
 
 ## Does it work?
-It mostly works if the temperature is listed as text in HTML, but there may be some issues if the temperature text cannot be identified through our scripts in the DOM or the temperature is part of an image, etc.  
+It mostly works if the temperature is listed as text in HTML, but there may be some issues if the temperature text cannot be identified through our scripts in the DOM or the temperature is part of an image, text has degree symbol but doesn't clarify if it is Fahrenheit or Celsius, etc.  
 
 [Working Example 1](https://en.wikipedia.org/wiki/Temperature)  
 [Working Example 2](https://www.weather.gov/okx/)  
